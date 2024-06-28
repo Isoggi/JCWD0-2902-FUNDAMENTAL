@@ -70,3 +70,34 @@ for (let i = 0; i < inputString.length; i++) {
 console.log(
   `string = “${inputString}”, search string = “${str_1}” → “${str_2}”`
 );
+
+inputString = "hello hello world";
+str_1 = "";
+for (let index = 0; index < inputString.length; index++) {
+  if (inputString.charAt(index - 1) === " " || index === 0) {
+    str_1 += inputString.charAt(index).toUpperCase();
+  } else str_1 += inputString.charAt(index);
+}
+
+console.log(`“${inputString}” → “${str_1}””`);
+
+inputString = "hello hello";
+str_1 = "";
+for (let index = inputString.length - 1; index >= 0; index--) {
+  str_1 += inputString.charAt(index);
+}
+console.log(`“${inputString}” → “${str_1}”`);
+
+inputString = "The QuiCk BrOwN Fox";
+str_1 = "";
+str_2 = "";
+for (let index = 0; index < inputString.length; index++) {
+  str_1 = inputString.charAt(index);
+  let isUpper = str_1.toUpperCase() === inputString.charAt(index);
+
+  str_2 += isUpper ? str_1.toLowerCase() : str_1.toUpperCase();
+}
+console.log(`“${inputString}” → “${str_2}”`);
+
+inputNum = 42;
+let inputNum2 = 27;
