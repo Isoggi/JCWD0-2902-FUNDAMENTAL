@@ -99,3 +99,27 @@ strArr.sort().reverse(); // desc
 console.log(strArr);
 
 strArr.sort(); // asc
+
+strArr.forEach((v, i) => {
+  console.log("Test");
+  console.log(`Index ${i} = ${v}`);
+});
+
+strArr.concat("kodok").forEach((v, i, self) => {
+  console.log(self);
+  console.log(`Index ${i} = ${v}`);
+});
+
+arr = ["A", "B"];
+arr2 = ["a", "b"];
+let arr3 = arr.concat(arr2);
+let arr4 = [...arr, ...arr2];
+
+console.log(arr3, arr4);
+
+console.log(arr3.filter((v, i) => v === "B" || v === "b"));
+console.log(arr3.map((v, i) => v === "B" || v === "b"));
+console.log(arr3.filter((v, i) => 1));
+console.log(arr3.map((v, i) => 1));
+
+console.log(arr3.reduce((pV, cV) => pV + cV));

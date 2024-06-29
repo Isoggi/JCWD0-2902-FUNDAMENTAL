@@ -101,3 +101,23 @@ console.log(`“${inputString}” → “${str_2}”`);
 
 inputNum = 42;
 let inputNum2 = 27;
+
+console.log(
+  `num1 = ${inputNum}, num2 = ${inputNum2} → ${
+    inputNum > inputNum2 ? inputNum : inputNum2
+  }`
+);
+
+// Write a conditional statement to sort three numbers
+// Example : num1 = 42, num2 = 27, num3 = 18 → 18, 27, 42
+let inputNum3: number = 18;
+let result:
+  | string
+  | number = `num1 = ${inputNum}, num2 = ${inputNum2}, num3 = ${inputNum3} →`;
+if (inputNum > inputNum) [inputNum, inputNum] = [inputNum, inputNum];
+if (inputNum > inputNum3) [inputNum, inputNum3] = [inputNum3, inputNum];
+if (inputNum2 > inputNum3) [inputNum2, inputNum3] = [inputNum3, inputNum2];
+//num1 = 18
+//num2 = 27
+//num3 = 42
+console.log(result, inputNum, inputNum2, inputNum3);
