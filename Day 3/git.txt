@@ -1,0 +1,13 @@
+repository => tempat menyimpan codingan kita 
+        => local => codingan kita tersimpan secara local di komputer kita masing2
+        => global => codingan kita tersimpan di server git
+commit => menyetujui perubahan codingan kita
+pull => menarik perubahan dari origin ke local
+fetch => menarik informasi commit dari origin ke local
+push => mengirim hasil commit local ke origin
+merged => hasil resolved dari conflict menjadi new commit
+branch => membuat cabang repository
+fork => mengcopy repository orang lain menjadi milik sendiri
+pull request => mengirimkan request untuk melakukan penggabungan antar branch
+staging => memilih perubahan yang mau dicommit
+collaborator => repository yang dapat dicommit secara langsung oleh orang lain(selain owner repo)

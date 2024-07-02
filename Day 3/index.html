@@ -1,10 +1,31 @@
+<!-- @format -->
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>exercise</title>
+    <script src="./index.ts"></script>
   </head>
   <body></body>
-  <script src="exercise.ts"></script>
+  <script>
+    let numb = 123;
+    console.log(numb);
+    let name = prompt("nama anda siapa");
+    let number1 = prompt("angka pertama"); // menerima input user dalam bentuk string
+    let number2 = prompt("angka kedua");
+
+    alert(
+      `hasil penjumlahan ${number1} + ${number2} = ${
+        Number(number1) + Number(number2)
+      }`
+    );
+
+    console.log(name);
+  </script>
 </html>
+
+<!-- google=> crawler=> html react=> client side rendering => menarik data dari
+database/API => request (waktu) => response => rerendering CSR => html =>
+request => response => rerendering SSR => request (waktu) => response => html -->

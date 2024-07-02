@@ -50,7 +50,7 @@ console.log(
 // Output : 2
 
 const date1: Date = new Date("2022-01-20");
-const date2: Date = new Date("2023-01-20");
+const date2: Date = new Date("2022-01-23");
 
 const diff: number = (Number(date2) - Number(date1)) / 1000 / 3600 / 24;
 console.log(Number("2") - 3);

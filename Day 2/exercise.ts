@@ -6,7 +6,7 @@ console.log(`${celcius} Celcius → ${(celcius * 9) / 5 + 32} Fahrenheit`);
 
 // Write a code to check whether the numb is odd or even
 // Example: 25 → odd numb, 2 → even numb
-const numb: number = 6;
+const numb: number = 15;
 console.log(`${numb} → ${numb % 2 ? "odd" : "even"} number`);
 
 // Write a code to check whether the numb is prime numb or not
@@ -14,7 +14,8 @@ console.log(`${numb} → ${numb % 2 ? "odd" : "even"} number`);
 // Example: 6 → 6 is not a prime numb
 let isPrime = true;
 if (numb == 1) isPrime = false;
-for (let i = 2; i != numb; i++)
+// 5 => 2 3 4 6
+for (let i = 2; i < numb; i++)
   if (numb % i == 0) {
     isPrime = false;
     break;
@@ -28,10 +29,10 @@ console.log(`${numb} → ${numb} is ${isPrime ? "prime" : "not a prime"} number`
 let sum: number = 0;
 let result = `${numb} →`;
 for (let i = 1; i <= numb; i++) {
-  sum += i;
+  sum += i; // 1, 1 + 2
   result += i != numb ? ` ${i} +` : ` ${i} `;
 }
-console.log(result, "=", sum);
+console.log(result, "=", sum); // / 6 → 1 + 2 + 3 + 4 + 5 + 6 = 21
 // Write a code to find factorial of a numb
 // Example: 4! → 4 x 3 x 2 x 1 = 24
 // Example: 6! → 6 x 5 x 4 x 3 x 2 x 1 = 720
@@ -48,7 +49,14 @@ console.log(result, "=", factorial);
 let number1: number = 0;
 let number2: number = 1;
 // 1 1 2 3 5 8 13 21 34 55 89 144 233 377 610
-for (let i = 1; i < numb; i++)
+for (
+  let i = 1;
+  i < numb;
+  i++ // [number1, number2] = [number2, number1 + number2];
+) {
+  // const tmp = number1 + number2;
+  // number1 = number2;
+  // number2 = tmp;
   [number1, number2] = [number2, number1 + number2];
-
+}
 console.log(`${numb} → ${number2}`);
