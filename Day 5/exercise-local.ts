@@ -144,7 +144,7 @@ console.log(`arr = [${arr}], arr2 = [${arr2}] → [${diffArr(arr, arr2)}]`);
 function onlyPrimitive(arr: Array<any>) {
   let tempArr = [...arr];
 
-  return tempArr.filter((x) => typeof x !== "object");
+  return tempArr.filter((x) => typeof x !== "object" || x === null);
 }
 
 arr = [1, [], undefined, {}, "string", {}, []];
@@ -168,11 +168,13 @@ function JanKenPon(a: Number | string) {
   if (typeof a == "string") jkp_num = SuitJepang.indexOf(a);
   else jkp_num = Number(a);
 
+  console.log([...SuitJepang].sort((a, b) => Math.random() - 0.5)[0]);
   let comJkp = SuitJepang.indexOf(
     [...SuitJepang].sort((a, b) => Math.random() - 0.5)[0]
   );
 
   if (jkp_num === comJkp - 1 || (jkp_num === 2 && comJkp === 0)) return "Win";
+  else if (jkp_num === comJkp) return "Draw";
   else return "Lose";
 }
 
