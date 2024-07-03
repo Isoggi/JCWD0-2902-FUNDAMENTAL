@@ -52,7 +52,7 @@ const sumIntArr = (a: Array<number>, b: Array<number>) => {
   let res = new Array<number>();
   let c_in = 0;
   while (c_in < a.length) {
-    res.push(a[0] + b[0]);
+    res.push(a[c_in] + b[c_in]);
     c_in++;
   }
   return res;
