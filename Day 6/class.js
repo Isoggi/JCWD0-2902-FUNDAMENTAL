@@ -163,3 +163,31 @@ const buku2 = new Book2("jadi dokter");
 console.log(buku2);
 
 buku2.showData();
+
+var expect = function (val) {
+  class result {
+    #value: false;
+    #error: "Not Equal";
+    #val;
+
+    constructor(val) {
+      this.#val = val;
+    }
+
+    #IsSame(val) {
+      this.#value = this.#val === val;
+      this.#error = this.#value ? "Equal" : "Not Equal";
+    }
+    toBe(val) {
+      IsSame(val);
+      return this.#value ? { value: this.#value } : { error: this.#error };
+    }
+
+    notToBe(val) {
+      IsSame(val);
+      return !this.#value ? { value: this.#value } : { error: this.#error };
+    }
+  }
+
+  return new result(val);
+};
