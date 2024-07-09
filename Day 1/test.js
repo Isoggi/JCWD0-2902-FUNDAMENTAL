@@ -1,7 +1,5 @@
 /** @format */
 
-const { ArrowLeftIcon } = require("@chakra-ui/icons");
-
 console.log("test");
 console.log("hehehehe");
 console.log("hihihi");
@@ -126,6 +124,7 @@ console.log(student1, student2, student3);
 //built in method string
 
 const str2 = "ini adalah string";
+
 console.log(str2.length);
 
 console.log("abc");

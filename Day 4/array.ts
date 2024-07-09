@@ -90,6 +90,7 @@ console.log(scores);
 console.log(scores.indexOf(50));
 console.log(scores.lastIndexOf(50));
 console.log(scores);
+
 scores.sort((a, b) => a - b); // sorting number dari besar ke kecil
 console.log(scores);
 scores.sort((a, b) => b - a); // sorting number dari besar ke kecil
@@ -150,7 +151,7 @@ console.log(arrEvenOdd);
 
 console.log(students4);
 
-const filter_students = students4.filter((v, i) => "0");
+const filter_students = students4.filter((v, i) => 1);
 const filter_students2 = students4.map((v, i) => 1);
 console.log(filter_students); //filter
 console.log(filter_students2); //map
@@ -214,3 +215,10 @@ const sum2 = arr_numbs.reduce((sm, curr_value) => {
 });
 console.log(sum);
 console.log(sum2);
+
+const arr5 = [1, 2, 3, 4];
+const arr6 = [1, 2, 3, 4, 6];
+
+arr5.reduce((arr, value) => [...arr, value + 1], [] as number[]);
+
+console.log(arr5.push(50) + arr6.push(12));
