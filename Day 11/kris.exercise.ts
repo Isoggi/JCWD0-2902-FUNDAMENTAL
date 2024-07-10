@@ -45,3 +45,15 @@ const stepStair = (n: number) => {
 
 let n = 3;
 console.log(`Input: n = ${n} Output: ${stepStair(n)}`);
+
+async function sleep(millis) {
+  let res = new Promise((resolve, reject) => {
+    setTimeout(() => resolve(millis), millis);
+  });
+}
+
+// sleep.then((result) => {
+
+// }).catch((err) => {
+
+// });
